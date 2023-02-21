@@ -190,11 +190,11 @@ footer nav ul {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding-bottom: 1rem;
+	padding-bottom: 2rem;
 }
 
 .filter button{
-	margin: 0 1rem;
+	margin: 0 0.5rem;
 	color: white;
 	border: none;
 	background-color: #1D6154;
@@ -202,4 +202,49 @@ footer nav ul {
 	border-radius: 60px;
 	font-family: 'Work Sans' ;
 	padding: 0.5rem 1.5rem;
+}
+
+.loginsize{
+	height: 70vh
+}
+
+.loginsize h2 {
+	text-align: center;
+	padding-bottom: 4rem;
+	padding-top: 4rem;
+
+}
+.loginpage{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+}
+.loginpage label{
+	padding-bottom: 1rem;
+	font-family: "Work Sans";
+}
+.container input{
+	width: 20rem;
+	height: 2rem;
+	background-color: white;
+	border: none;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 10px;
+	font-size: 1.5rem;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	margin: 2rem 0;
+}
+
+.loginpage input[type=submit]{
+	border: none;
+	height: 2rem;
+}
+
+.spanstyle{
+	text-decoration: underline;
+	font-family: "Work Sans";
 }
