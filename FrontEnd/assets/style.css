@@ -193,11 +193,18 @@ footer nav ul {
 	padding-bottom: 2rem;
 }
 
+/*Style a mettre dans le JS*/
+.whenhover{
+	background-color: #1D6154;
+	color: #ffff;
+}
+/*Style a mettre dans le JS*/
 .filter button{
 	margin: 0 0.5rem;
-	color: white;
+	color: #1D6154;
 	border: none;
-	background-color: #1D6154;
+	background-color: #ffff;
+	border: 1px solid #1D6154;
 	font-size: 1rem;
 	border-radius: 60px;
 	font-family: 'Work Sans' ;
