@@ -209,6 +209,7 @@ footer nav ul {
 	border-radius: 60px;
 	font-family: 'Work Sans' ;
 	padding: 0.5rem 1.5rem;
+	cursor: pointer;
 }
 
 .loginsize{
