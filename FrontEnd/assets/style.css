@@ -256,3 +256,73 @@ footer nav ul {
 	text-decoration: underline;
 	font-family: "Work Sans";
 }
+
+.error{
+	display: none; 
+	align-items: center; 
+	justify-content: center;
+	background-color: rgb(253, 65, 65);
+	font-size: 16px;
+	color: #ffff;
+	width: 20rem;
+	height: 2rem;
+}
+
+/*Style Admin Index */
+
+
+.adminedit{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+	height: 3.7rem;
+}
+
+
+.adminedit__icon{
+	padding-right: 1rem;
+	color: white;
+}
+.adminedit__text{
+	font-size: 16px;
+	font-family: "Work Sans";
+	padding-right: 1rem;
+	color: white;
+}
+
+.btn-admin{
+	border-radius: 20px;
+	width: 13rem;
+	height: 2.35rem;
+	color: black;
+	font-size: 14px;
+	font-family: "Work Sans";
+	font-weight: 500;
+}
+/* En dessous de la photo */
+.edituserpics{
+	display: flex;
+	flex-direction: row;
+	padding-top: 1rem;
+	padding-left: 3.7rem;
+}
+
+/* Mes projets*/
+.centeredit{
+	display: flex;
+	justify-content: center;
+}
+
+.edituser{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 2rem;
+	padding-left: 2rem;
+	font-family: "Work Sans";
+}
+
+.edituser__icon{
+	padding-right: 0.5rem;
+}
