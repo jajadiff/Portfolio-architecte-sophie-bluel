@@ -10,7 +10,7 @@
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
 	<script src="https://kit.fontawesome.com/5368b41e40.js" crossorigin="anonymous"></script>
-	<script type="module" src="./JS/script.js"></script>
+	<script type="module" src="./JS/admin.js"></script>
 </head>
 <body>
 	<div class="adminedit">
@@ -49,10 +49,57 @@
 	<section id="portfolio">
 		<div class="centeredit">
 			<h2>Mes Projets</h2> 
-				<div class="edituser">
+				<div class="edituser myBtnModale">
 					<i class="edituser__icon fa-solid fa-pen-to-square"></i>
 					<p>modifier</p>
 				</div>
+		</div>
+		<div class="modale">
+			<div class="modale-content">
+			<span class="close">&times;</span>
+			<h4>Galerie Photo</h4>
+				<div class="gallery2">
+		
+				</div>  
+				<div class="modale__txt">
+				<button class="myBtnModale2">Ajouter une photo</button>
+				<span>Supprimer une photo</span>
+			</div>
+			</div>
+			<div class="modale-content2">
+				<div class="content-spacebetween">
+					<i class="fa-solid fa-arrow-left" id="backfirstmodale"></i>
+					<span class="close">&times;</span>
+				</div>
+				<h4>Ajout photo</h4>
+				<div class="carrer-container">
+					<div class="carrer-content"></div>
+				</div>
+				
+
+				<form>
+					<div class="container2">
+						<label for="title">Titre</label>
+						<input type="text" name="title" id="title">
+					</div>
+			
+					<div class="container2">
+						<label for="form-category">Catégorie</label>
+					
+						<select id="form-category">
+							<option value=""></option>
+							<option value="">Objets</option>
+							<option value="">Appartements</option>
+							<option value="">Hôtels & restaurants</option>
+						</select>
+					</div>
+				</form>
+				<div class="modale__txt2">
+					<button>Valider</button>
+				
+				</div>
+
+			</div>
 	</div>
 		<div class="filter">
 			<button class="btn-all">Tous</button>
