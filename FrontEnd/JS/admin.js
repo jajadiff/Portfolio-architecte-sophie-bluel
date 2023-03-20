@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 /*
 /************************************************ */
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /* Modale Galery */
 // Evenement qui est déclencé seulements lorsque le HTML à fini de charger
 document.addEventListener("DOMContentLoaded", async function () {
@@ -84,6 +85,71 @@ document.addEventListener("DOMContentLoaded", async function () {
   const pieces = await response.json();
   // Constante des buttons
 
+  // Fonction pour afficher la galerie en fonction de la catégorie sélectionnée
+  // Fonction pour créer le contenu HTML d'une figure
+  function createFigure(article) {
+    //Création de l'élément HTML figure
+    const figureGallery = document.createElement("figure");
+    //Création de l'élément HTML img
+    const imageGallery = document.createElement("img");
+    // La .src est définie par article.imageUrl(pieces[i].imageUrl)
+    imageGallery.src = article.imageUrl;
+    // Création de l'élément HTML figcaption
+    const titleGallery = document.createElement("figcaption");
+    // textContent est définie par article.title(pieces[i].title)
+    titleGallery.textContent = "éditer";
+
+    // Ajout de l'écouteur d'événements pour le clic sur l'image de la figure
+    imageGallery.addEventListener("click", async function () {
+      // Suppression de la figure correspondante
+      figureGallery.remove();
+
+      const token = localStorage.getItem("token");
+      // Envoi de la requête DELETE à l'API
+      const response = await fetch(
+        `http://localhost:5678/api/works/${article.id}`,
+        {
+          method: "DELETE",
+          headers: {
+            Authorization: "Bearer " + token,
+          },
+        }
+      );
+      // Vérification du statut de la réponse
+      if (response.ok) {
+        console.log(`Article ${article.id} supprimé de l'API`);
+      } else {
+        console.error(
+          `Erreur lors de la suppression de l'article ${article.id} : `,
+          response.status
+        );
+      }
+    });
+
+    // const submitProjet = document.getElementById("submit-projet");
+    // submitProjet.addEventListener("click", async function () {
+    //   console.log(submitProjet);
+    //   // Push
+    //   figureGallery.push();
+    //   //Token
+    //   const token = localStorage.getItem("token");
+
+    //   const response = await fetch(`http://localhost:5678/api/works/`, {
+    //     method: "POST",
+    //     headers: {
+    //       Authorization: "Bearer " + token,
+    //     },
+    //   });
+    //   return response;
+    // });
+
+    // Retourne la figure complète
+    figureGallery.appendChild(imageGallery);
+    figureGallery.appendChild(titleGallery);
+    return figureGallery;
+  }
+
+  ///////////////////////
   // Fonction pour afficher la galerie en fonction de la catégorie sélectionnée
   function galleryAll(categoryId) {
     // dom div avec la class "gallery"
@@ -101,23 +167,10 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       // Si idGallery === categoryId OU categoryId === pas de valeurs
       if (idGallery === categoryId || categoryId === undefined) {
-        //Création de l'éléments HTML figure
-        const figureGallery = document.createElement("figure");
-        //Création de l'éléments HTML img
-        const imageGallery = document.createElement("img");
-        // La .src est définie par article.imageUrl(pieces[i].imageUrl)
-        imageGallery.src = article.imageUrl;
-        // Création de l'éléments HTML figcaption
-        const titleGallery = document.createElement("figcaption");
-        // textContent est définie par article.title(pieces[i].title)
-        titleGallery.textContent = "éditer";
-
-        /* figureGallery est l'enfant de actualGallery 
-        (représente la div class gallery dans le HTML)*/
-        actualGallery.appendChild(figureGallery);
-        // imageGallery, titleGallery sont les enfants de figureGallery
-        figureGallery.appendChild(imageGallery);
-        figureGallery.appendChild(titleGallery);
+        // Création de la figure correspondante
+        const figure = createFigure(article);
+        // Ajout de la figure à la galerie
+        actualGallery.appendChild(figure);
       }
     }
   }
