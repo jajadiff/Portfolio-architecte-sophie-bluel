@@ -73,7 +73,9 @@
 				</div>
 				<h4>Ajout photo</h4>
 				<div class="carrer-container">
-					<div class="carrer-content"></div>
+					<div class="carrer-content">
+						<input type="file">
+					</div>
 				</div>
 				
 
@@ -86,16 +88,17 @@
 					<div class="container2">
 						<label for="form-category">Catégorie</label>
 					
-						<select id="form-category">
-							<option value=""></option>
-							<option value="">Objets</option>
-							<option value="">Appartements</option>
-							<option value="">Hôtels & restaurants</option>
-						</select>
+						<select id="form-category" name="category">
+							<option value="" disabled selected></option>
+							<option value="objets">Objets</option>
+							<option value="appartements">Appartements</option>
+							<option value="hotels-restaurants">Hôtels & restaurants</option>
+						  </select>
+						  
 					</div>
 				</form>
 				<div class="modale__txt2">
-					<button>Valider</button>
+					<button id="submit-projet">Valider</button>
 				
 				</div>
 
