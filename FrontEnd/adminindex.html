@@ -72,35 +72,33 @@
 					<span class="close">&times;</span>
 				</div>
 				<h4>Ajout photo</h4>
-				<div class="carrer-container">
-					<div class="carrer-content">
-						<input type="file">
+				<form id="my-form">
+					<div class="carrer-container">
+					  <div class="carrer-content">
+						<input type="file" name="file" id="filestyle">
+					  </div>
 					</div>
-				</div>
-				
-
-				<form>
+				  
 					<div class="container2">
-						<label for="title">Titre</label>
-						<input type="text" name="title" id="title">
+					  <label for="title">Titre</label>
+					  <input type="text" name="title" id="title">
 					</div>
-			
+				  
 					<div class="container2">
-						<label for="form-category">Catégorie</label>
-					
-						<select id="form-category" name="category">
-							<option value="" disabled selected></option>
-							<option value="objets">Objets</option>
-							<option value="appartements">Appartements</option>
-							<option value="hotels-restaurants">Hôtels & restaurants</option>
-						  </select>
-						  
+					  <label for="form-category">Catégorie</label>
+					  <select id="form-category" name="category">
+						<option value="" disabled selected></option>
+						<option value="objets">Objets</option>
+						<option value="appartements">Appartements</option>
+						<option value="hotels-restaurants">Hôtels &amp; restaurants</option>
+					  </select>
 					</div>
-				</form>
-				<div class="modale__txt2">
-					<button id="submit-projet">Valider</button>
-				
-				</div>
+				  
+					<div class="modale__txt2">
+					  <button type="submit" id="submit-projet">Valider</button>
+					</div>
+				  </form>
+				  
 
 			</div>
 	</div>

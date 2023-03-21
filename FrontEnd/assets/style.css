@@ -434,11 +434,14 @@ footer nav ul {
 	justify-content: center;
 	align-items: center;
 }
-
+.carrer-content #filestyle{
+	font-size: 1rem;
+}
 .carrer-content{
 	background-color: red;
 	width: 370px;
 	height: 150px;
+	font-size: 16px;
 }
 .modale__txt2 {
     display: flex;
@@ -498,6 +501,7 @@ footer nav ul {
 .modale__txt2{
 	padding-top: 2rem;
 	margin: auto;
+	margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
     width: 400px;
