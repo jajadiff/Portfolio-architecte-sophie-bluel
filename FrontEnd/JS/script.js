@@ -52,18 +52,34 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Ajout des eventListener "click" sur les bouttons
     btnAll.addEventListener("click", function () {
       galleryAll();
+      toggleButton(btnAll);
+      toggleButton(btnObjets, false);
+      toggleButton(btnApps, false);
+      toggleButton(btnHotel, false);
     });
 
     btnObjets.addEventListener("click", function () {
       galleryAll(1);
+      toggleButton(btnAll, false);
+      toggleButton(btnObjets);
+      toggleButton(btnApps, false);
+      toggleButton(btnHotel, false);
     });
 
     btnApps.addEventListener("click", function () {
       galleryAll(2);
+      toggleButton(btnAll, false);
+      toggleButton(btnObjets, false);
+      toggleButton(btnApps);
+      toggleButton(btnHotel, false);
     });
 
     btnHotel.addEventListener("click", function () {
       galleryAll(3);
+      toggleButton(btnAll, false);
+      toggleButton(btnObjets, false);
+      toggleButton(btnApps, false);
+      toggleButton(btnHotel);
     });
 
     // Appel de la fonction pour tout afficher pas défauts
@@ -78,3 +94,18 @@ classList.add("whenhover");
 classList.toggle("whenhover");
 
 */
+function toggleButton(button, active = true) {
+  if (active) {
+    button.classList.add("active");
+    button.classList.remove("btn-all");
+    button.classList.remove("btn-objets");
+    button.classList.remove("btn-apps");
+    button.classList.remove("btn-hotel");
+  } else {
+    button.classList.remove("active");
+    button.classList.add("btn-all");
+    button.classList.add("btn-objets");
+    button.classList.add("btn-apps");
+    button.classList.add("btn-hotel");
+  }
+}
