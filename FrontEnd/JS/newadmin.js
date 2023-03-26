@@ -142,6 +142,8 @@ document.addEventListener("DOMContentLoaded", async function () {
   // Fonction pour afficher la galerie en fonction de la catégorie sélectionnée
   // Fonction pour créer le contenu HTML d'une figure
   function createFigure(article) {
+    const iconGallery = document.createElement("i")
+    iconGallery.innerHTML = `<i class="fa-regular fa-trash-can"></i>`;
     //Création de l'élément HTML figure
     const figureGallery = document.createElement("figure");
     //Création de l'élément HTML img
@@ -184,6 +186,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Retourne la figure complète
     figureGallery.appendChild(imageGallery);
     figureGallery.appendChild(titleGallery);
+    figureGallery.appendChild(iconGallery);
     return figureGallery;
   }
 

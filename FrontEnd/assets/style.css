@@ -449,6 +449,18 @@ footer nav ul {
     justify-content: center;
     align-items: center;
 }
+.fa-trash-can{
+	background-color: black;
+	color: white;
+	width: 20px;
+	text-align: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	position: relative;
+	z-index: 999;
+	top: -5.5rem;
+	left: 2rem;
+}
 
 .modale__txt2 button {
     background-color: 	#A7A7A7;
