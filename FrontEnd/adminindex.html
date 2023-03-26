@@ -10,7 +10,7 @@
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
 	<script src="https://kit.fontawesome.com/5368b41e40.js" crossorigin="anonymous"></script>
-	<script type="module" src="./JS/admin.js"></script>
+	<script type="module" src="./JS/newadmin.js"></script>
 </head>
 <body>
 	<div class="adminedit">
@@ -72,7 +72,7 @@
 					<span class="close">&times;</span>
 				</div>
 				<h4>Ajout photo</h4>
-				<form id="my-form">
+				<form id="my-form" enctype="multipart/form-data">
 					<div class="carrer-container">
 					  <div class="carrer-content">
 						<input type="file" name="file" id="filestyle">
@@ -88,9 +88,9 @@
 					  <label for="form-category">Catégorie</label>
 					  <select id="form-category" name="category">
 						<option value="" disabled selected></option>
-						<option value="objets">Objets</option>
-						<option value="appartements">Appartements</option>
-						<option value="hotels-restaurants">Hôtels &amp; restaurants</option>
+						<option value="1">Objets</option>
+						<option value="2">Appartements</option>
+						<option value="3">Hôtels &amp; restaurants</option>
 					  </select>
 					</div>
 				  
