@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Hôtels & restaurants
     btnHotel.addEventListener("click", function () {
       galleryAll(3);
-       toggleButton(btnAll, false);
+      toggleButton(btnAll, false);
       toggleButton(btnObjets, false);
       toggleButton(btnApps, false);
       toggleButton(btnHotel);
@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 });
 
-//Filter toggle 
+//Filter toggle
 function toggleButton(button, active = true) {
   if (active) {
     button.classList.add("active");
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   // Fonction pour afficher la galerie en fonction de la catégorie sélectionnée
   // Fonction pour créer le contenu HTML d'une figure
   function createFigure(article) {
-    const iconGallery = document.createElement("i")
+    const iconGallery = document.createElement("i");
     iconGallery.innerHTML = `<i class="fa-regular fa-trash-can"></i>`;
     //Création de l'élément HTML figure
     const figureGallery = document.createElement("figure");
@@ -287,9 +287,26 @@ submitButton.addEventListener("click", (event) => {
         Authorization: "Bearer " + token,
       },
       body: formData,
-    })
-    
+    });
   } catch (error) {
     console.log(error);
   }
 });
+function previewImage() {
+  var file = document.getElementById("filestyle").files;
+  if (file.length > 0) {
+    var fileReader = new FileReader();
+
+    fileReader.onload = function (event) {
+      document.getElementById("preview").setAttribute("src", event.target.result);
+      document.querySelector(".carrer-content label").style.display = "none";
+      document.querySelector(".carrer-content span").style.display = "none";
+      document.querySelector(".carrer-content i").style.display = "none";
+    };
+
+
+    fileReader.readAsDataURL(file[0]);
+  }
+}
+
+document.getElementById("filestyle").addEventListener("change", previewImage);
