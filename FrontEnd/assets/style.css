@@ -427,6 +427,7 @@ footer nav ul {
 	width: 50%;
 	margin: auto;
 	margin-top: 5rem;
+	border-radius: 10px;
 }
 
 
@@ -437,6 +438,7 @@ footer nav ul {
 	width: 50%;
 	margin: auto;
 	margin-top: 5rem;
+	border-radius: 10px;
 
 }
 .content-spacebetween{
@@ -457,13 +459,44 @@ footer nav ul {
 	align-items: center;
 }
 .carrer-content #filestyle{
-	font-size: 1rem;
+	display: none;
 }
 .carrer-content{
-	background-color: red;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #E8F1F6;
 	width: 370px;
-	height: 150px;
+	/* height: 150px; */
 	font-size: 16px;
+}
+
+.carrer-container i{
+	font-size: 4rem;
+	margin-top: 3rem;
+	color: 
+	#CBD6DC;
+}
+
+.carrer-container label{
+	font-family: "Work Sans";
+	font-weight: 500;
+	cursor: pointer;
+	display: flex;
+	border-radius: 50px;
+	padding: 0rem 1rem;
+	text-align: center;
+	color: #306685;
+	background-color: #CBD6DC;
+	padding: 1rem;
+	margin-bottom: 1rem;
+
+}
+.carrer-container span{
+	font-family: "Work Sans";
+	margin-bottom: 1rem;
+	font-size: 12px;
 }
 .modale__txt2 {
     display: flex;
@@ -474,7 +507,7 @@ footer nav ul {
 .fa-trash-can{
 	background-color: black;
 	color: white;
-	width: 2px;
+	width: 20px;
 	text-align: center;
 	padding-top: 2px;
 	padding-bottom: 2px;
