@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Appel de la fonction pour tout afficher pas défauts
     galleryAll();
+    toggleButton(btnAll);
   } catch {
     console.log("donnée non disponibles");
   }
