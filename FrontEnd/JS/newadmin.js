@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     titleGallery.textContent = "éditer";
 
     // Ajout de l'écouteur d'événements pour le clic sur l'image de la figure
-    imageGallery.addEventListener("click", async function () {
+    iconGallery.addEventListener("click", async function () {
       // Suppression de la figure correspondante
       figureGallery.remove();
 
