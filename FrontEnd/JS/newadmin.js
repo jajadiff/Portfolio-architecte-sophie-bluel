@@ -32,17 +32,20 @@ for (let i = 0; i < span.length; i++) {
   span[i].addEventListener("click", () => {
     // Change le display block en none
     modal.style.display = "none";
+    removePreview()
   });
 }
 
 backFirstModale.addEventListener("click", () => {
   modalDeux.style.display = "none";
   modalUn.style.display = "block";
+  removePreview();
 });
 // Si clique en dehors de la fenetre (modale) display none
 window.addEventListener("click", function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
+    removePreview()
   }
 });
 ///////////////////////////////////////////////////////
@@ -299,15 +302,23 @@ function previewImage() {
     var fileReader = new FileReader();
 
     fileReader.onload = function (event) {
-      document.getElementById("preview").setAttribute("src", event.target.result);
+      document
+        .getElementById("preview")
+        .setAttribute("src", event.target.result);
       document.querySelector(".carrer-content label").style.display = "none";
       document.querySelector(".carrer-content span").style.display = "none";
       document.querySelector(".carrer-content i").style.display = "none";
     };
-
 
     fileReader.readAsDataURL(file[0]);
   }
 }
 
 document.getElementById("filestyle").addEventListener("change", previewImage);
+
+function removePreview() {
+  document.getElementById("preview").removeAttribute("src");
+  document.querySelector(".carrer-content label").style.display = "block";
+  document.querySelector(".carrer-content span").style.display = "block";
+  document.querySelector(".carrer-content i").style.display = "inline";
+}
