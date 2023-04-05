@@ -409,7 +409,8 @@ footer nav ul {
 .modale__txt button{
 	background-color: 	#1D6154;
 	color: white;
-	width: 30%;
+	width: 100%;
+	max-width: 150px;
 	border-radius: 20px;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
@@ -607,7 +608,9 @@ footer nav ul {
 	margin-top: 1rem;
 	background-color: #A7A7A7;
     color: white;
-    width: 100%;
+    /* width: 100%; */
+	width:100%;
+	max-width: 150px;
     border-radius: 20px;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
