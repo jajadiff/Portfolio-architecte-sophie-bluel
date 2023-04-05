@@ -191,6 +191,7 @@ footer nav ul {
 	justify-content: center;
 	align-items: center;
 	padding-bottom: 2rem;
+	flex-wrap: wrap;
 }
 
 /*Style a mettre dans le JS*/
@@ -385,11 +386,12 @@ footer nav ul {
 	margin: auto;
 	display: flex;
 	flex-wrap: wrap;
-	width: 400px;
+	max-width: 400px;
 	gap: 1rem;
 	align-items: center;
 	border-bottom: 2px solid #B3B3B3;
 	padding-bottom: 2rem;
+	padding-left: 10px;
 	margin-bottom: 2rem;
 }
 
@@ -498,13 +500,9 @@ footer nav ul {
 	margin-bottom: 1rem;
 	font-size: 12px;
 }
-.modale__txt2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 .fa-trash-can{
+	cursor: pointer;
 	background-color: black;
 	color: white;
 	width: 20px;
@@ -517,21 +515,10 @@ footer nav ul {
 	left: 2rem;
 }
 
-.modale__txt2 button {
-    background-color: 	#A7A7A7;
-    color: white;
-    width: 30%;
-    border-radius: 20px;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    font-family: 'Work Sans';
-    margin-bottom: 1rem;
-    border: none;
-    cursor: pointer;
-}
+
 
 .modale-content2 form{
-	display: flex;
+	/* display: flex; */
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
@@ -539,11 +526,13 @@ footer nav ul {
 	
 }
 .modale-content2 form label{
+
 	margin-top: 2rem;
 	padding-bottom: 1rem;
 }
 .modale-content2 form input {
-		width: 20rem;
+		/* width: 20rem; */
+		width: 40%;
 		height: 2rem;
 		background-color: white;
 		border: none;
@@ -552,7 +541,7 @@ footer nav ul {
 	}
 	
 .modale-content2 form select{
-		width: 20rem;
+	width: 40%;
 		height: 2rem;
 		background-color: white;
 		border: none;
@@ -563,8 +552,11 @@ footer nav ul {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	width: 100%;
+    PADDING-LEFT: 30%;
 }
 
+/*
 .modale__txt2{
 	padding-top: 2rem;
 	margin: auto;
@@ -577,4 +569,50 @@ footer nav ul {
     border-top: 2px solid #B3B3B3;
     padding-bottom: 2rem;
     margin-bottom: 2rem;
+} */
+/* 
+.modale__txt2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .modale__txt2 button {
+    background-color: 	#A7A7A7;
+    color: white;
+    width: 30%;
+    border-radius: 20px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-family: 'Work Sans';
+    margin-bottom: 1rem;
+    border: none;
+    cursor: pointer;
+} */
+
+.modale__txt2{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 40%;
+	margin-top: 1rem;
+	border-top: 2px solid #B3B3B3;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modale__txt2 button{
+	margin-top: 1rem;
+	background-color: #A7A7A7;
+    color: white;
+    width: 100%;
+    border-radius: 20px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-family: 'Work Sans';
+    margin-bottom: 1rem;
+    border: none;
+    cursor: pointer;
 }
