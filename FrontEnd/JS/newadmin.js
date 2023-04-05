@@ -33,7 +33,7 @@ for (let i = 0; i < span.length; i++) {
   span[i].addEventListener("click", () => {
     // Change le display block en none
     modal.style.display = "none";
-  }); 
+  });
 }
 
 for (let i = 0; i < span.length; i++) {
@@ -328,4 +328,6 @@ function removePreview() {
   document.querySelector(".carrer-content label").style.display = "block";
   document.querySelector(".carrer-content span").style.display = "block";
   document.querySelector(".carrer-content i").style.display = "inline";
+  // Reset la value de l'input
+  document.getElementById("filestyle").value = "";
 }
