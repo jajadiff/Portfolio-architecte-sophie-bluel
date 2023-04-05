@@ -28,14 +28,21 @@ btnDeux.addEventListener("click", () => {
   modalUn.style.display = "none";
 });
 // Boucle for + ajout eventLister click
+
 for (let i = 0; i < span.length; i++) {
   span[i].addEventListener("click", () => {
     // Change le display block en none
     modal.style.display = "none";
-    removePreview()
-  });
+  }); 
 }
 
+for (let i = 0; i < span.length; i++) {
+  span[i].addEventListener("click", removePreview);
+}
+
+/////////////////////////////
+
+/////////////////////////////
 backFirstModale.addEventListener("click", () => {
   modalDeux.style.display = "none";
   modalUn.style.display = "block";
@@ -45,7 +52,7 @@ backFirstModale.addEventListener("click", () => {
 window.addEventListener("click", function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
-    removePreview()
+    removePreview();
   }
 });
 ///////////////////////////////////////////////////////
